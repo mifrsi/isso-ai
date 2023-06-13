@@ -1,0 +1,29 @@
+<html>
+    <head> 
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p>Avalie o o atendimento</p>
+        <p>
+            <input type="radio" name="aval" value="Muito insatisfatório">Muito insatisfatório
+            <input type="radio" name="aval" value="insatisfatório">insatisfatório
+            <input type="radio" name="aval" value="Bom">Bom
+            <input type="radio" name="aval" value="Satisfatório">Satisfatório
+            <input type="radio" name="aval" value="Exelente">Exelente
+        </p>
+        <p>
+            <button id="btnAvalia">Enviar</button>
+        </p>
+        <script>
+            btn = document.getElementById('btnAvalia');
+            btn.addEventListener('click', ()=>{
+            avaliacoes = document.getElementsByName('aval');
+            avaliacoes.forEach((aval)=>{
+                if (aval.checked){
+                    alert('Sua avaliação' + aval.value);
+                }
+            })
+        });
+        </script>   
+    </body>
+</html>
